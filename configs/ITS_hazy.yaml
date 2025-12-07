@@ -1,0 +1,12 @@
+# Training configuration
+TRAINING:
+  VAL_AFTER_EVERY: 1
+  SAVE_AFTER_EVERY: 50
+  RESUME: True  # False
+  PATCH_SIZE: 256
+  TRAIN_DIR: '/data/home/zlr/Code/Hazydataset/ITS/'       # path to training data
+  VAL_DIR: '/data/home/zlr/Code/Hazydataset/SOTS/indoor/' # path to validation data
+  SAVE_DIR: './checkpoints/ITS_hazy/'           # path to save models and images
+
+TESTING:
+  TEST_DIR: '/data/home/zlr/Code/Hazydataset/SOTS/indoor/'
