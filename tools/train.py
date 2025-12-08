@@ -62,7 +62,7 @@ def parse_args():
     parser.add_argument('--channel', type=int, default=24)
     parser.add_argument('--batch_size', type=int, default=4)
     parser.add_argument('--epochs', type=int, default=1000)
-    parser.add_argument('--lr_init', type=float, default=3e-4)
+    parser.add_argument('--lr_init', type=float, default=2e-4)
     parser.add_argument('--lr_min', type=float, default=1e-6)
     parser.add_argument('--print_freq', type=int, default=100)
     parser.add_argument('--seed', type=int, default=42)
