@@ -26,7 +26,14 @@ Create and Activate a Conda Environment
 conda create --name FRWKV python=3.10
 conda activate FRWKV 
 ```
-
+Install PyTorch with CUDA 11.7 support:
+```markup
+conda install pytorch=1.13.1 torchvision=0.14.1 torchaudio=0.13.1 torchmetrics=1.5.2 cudatoolkit=11.7 -c pytorch
+```
+Install Python Dependencies
+```markup
+conda install pytorch=1.13.1 torchvision=0.14.1 torchaudio=0.13.1 torchmetrics=1.5.2 cudatoolkit=11.7 -c pytorch
+```
 
 ## Training
 ```markup
