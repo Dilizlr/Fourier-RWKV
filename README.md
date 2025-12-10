@@ -44,11 +44,11 @@ mim install mmcv==1.7.0
 
 ## Training
 ```markup
-python tools/train.py
+python tools/train.py --mode ITS --init_port 23456 --gpus 0,1
 ```
 
 ## Testing
 Pre-trained weights can be obtained from.
 ```markup
-python tools/test.py
+python tools/test.py --mode ITS 
 ```
