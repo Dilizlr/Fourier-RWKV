@@ -32,7 +32,14 @@ conda install pytorch=1.13.1 torchvision=0.14.1 torchaudio=0.13.1 torchmetrics=1
 ```
 Install Python Dependencies: 
 ```markup
-conda install pytorch=1.13.1 torchvision=0.14.1 torchaudio=0.13.1 torchmetrics=1.5.2 cudatoolkit=11.7 -c pytorch
+pip install pyyaml tqdm colorama pandas natsort  
+pip install matplotlib tensorboardX 
+pip install thop prefetch_generator 
+pip install opencv-python
+pip install timm mmcls 
+pip install pytorch_msssim pyiqa lpips
+pip install -U openmim
+mim install mmcv==1.7.0
 ```
 
 ## Training
