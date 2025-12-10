@@ -22,14 +22,14 @@ import custom_utils
 
 def parse_test_args():
     parser = argparse.ArgumentParser(description='FFTRWKV - Testing')
-    parser.add_argument('--mode', type=str, default='OTS', help='Model type')
+    parser.add_argument('--mode', type=str, default='ITS', help='Model type')
     parser.add_argument('--channel', type=int, default=24, help='Channel size')
-    parser.add_argument('--model_path', type=str, default='./checkpoints/OTS_bestPSNR.pth')
-    parser.add_argument('--yml_path', type=str, default='./configs/OTS_hazy.yaml', help='Path to config YAML file')
+    parser.add_argument('--model_path', type=str, default='./checkpoints/ITS_bestPSNR.pth')
+    parser.add_argument('--yml_path', type=str, default='./configs/ITS_hazy.yaml', help='Path to config YAML file')
     parser.add_argument('--save_dir', type=str, default='./test_results/', help='Directory to save test results')
     parser.add_argument('--save_images', action='store_true', default=True, help='Whether to save output images')
     parser.add_argument('--save_metrics', action='store_true', default=True, help='Whether to save per-image metrics')
-    parser.add_argument('--device', type=str, default='cuda:0' if torch.cuda.is_available() else 'cpu', help='Device to test the model')
+    parser.add_argument('--gpu', type=int, default=0, help='GPU id to use (default: 0)')
     return parser.parse_args()
 
 def save_metrics_to_txt(metrics_data, summary_stats, txt_path):
@@ -67,7 +67,10 @@ def test_model():
     args = parse_test_args()
     
     # 设备配置
-    device = torch.device(args.device)
+    if args.gpu is not None and args.gpu >= 0 and torch.cuda.is_available():
+        device = torch.device(f'cuda:{args.gpu}')
+    else:
+        device = torch.device('cpu')
     
     # 加载配置
     with open(args.yml_path, 'r') as f:
