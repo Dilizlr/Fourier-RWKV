@@ -10,4 +10,4 @@ Image dehazing is crucial for reliable visual perception, yet it remains highly 
 Extensive experiments on multiple benchmarks demonstrate that Fourier-RWKV delivers state-of-the-art performance across diverse haze scenarios while significantly reducing computational overhead, establishing a favorable trade-off between restoration quality and practical efficiency.
 
 ## Overview
-![](https://github.com/Dilizlr/Fourier-RWKV/blob/main/README_images/overview.png)
+![](https://github.com/Dilizlr/Fourier-RWKV/blob/main/README_images/overview.jpg)
