@@ -44,7 +44,7 @@ mim install mmcv==1.7.0
 
 ## Training
 ```markup
-python tools/train.py --mode ITS --init_port 23456 --gpus 0,1
+python tools/train.py --mode ITS --yml_path your_yam_path --init_port 23456 --gpus 0,1
 ```
 
 ## Testing
