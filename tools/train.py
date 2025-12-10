@@ -55,7 +55,7 @@ def strip_module_prefix(state_dict):
 
 def parse_args():
     parser = argparse.ArgumentParser(description='FFTRWKV — DDP Training')
-    parser.add_argument('--model_name', type=str, default='ITS') 
+    parser.add_argument('--mode', type=str, default='ITS') 
     parser.add_argument('--yml_path', type=str, default='./configs/ITS_hazy.yaml')
     parser.add_argument('--pretrain_weights', type=str, default='')
     parser.add_argument('--channel', type=int, default=24)
@@ -97,7 +97,7 @@ def train_worker(rank, world_size, args, gpu_list):
         config = yaml.safe_load(f)
     Train = config['TRAINING']
 
-    mode = args.model_name
+    mode = args.mode
     save_root = os.path.join(Train['SAVE_DIR'], mode)
     model_dir = os.path.join(save_root, 'models')
     log_dir = os.path.join(save_root, 'log')
@@ -195,7 +195,7 @@ def train_worker(rank, world_size, args, gpu_list):
 
         print(f"==> Training details:")
         print(f"------------------------------------------------------------------")
-        print(f"Restoration mode:   {args.model_name}")
+        print(f"Restoration mode:   {args.mode}")
         print(f"Train patch size:   {Train['PATCH_SIZE']}x{Train['PATCH_SIZE']}")
         print(f"Model parameters:   {params_m:.2f} M")
         print(f"Model FLOPs:        {flops_g:.2f} G")
