@@ -20,11 +20,11 @@ conda env create -f environment.yml
 
 ## Training
 ~~~
-python tool/train.py
+python tools/train.py
 ~~~
 
 ## Testing
 Pre-trained weights can be obtained from.
 ~~~
-python tool/test.py
+python tools/test.py
 ~~~
