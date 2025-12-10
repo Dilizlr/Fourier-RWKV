@@ -50,5 +50,5 @@ python tools/train.py --mode ITS --init_port 23456 --gpus 0,1
 ## Testing
 Pre-trained weights can be obtained from.
 ```markup
-python tools/test.py --mode ITS 
+python tools/test.py --mode ITS --gpu 0
 ```
