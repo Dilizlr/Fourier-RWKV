@@ -1,5 +1,4 @@
 import os
-os.environ["TORCH_CUDA_ARCH_LIST"] = "8.6"
 import sys
 import time
 import random
@@ -7,6 +6,7 @@ import argparse
 import warnings
 import yaml
 import numpy as np
+os.environ["TORCH_CUDA_ARCH_LIST"] = "8.6"
 warnings.filterwarnings("ignore", category=UserWarning)
 
 import torch
