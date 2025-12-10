@@ -11,3 +11,20 @@ Extensive experiments on multiple benchmarks demonstrate that Fourier-RWKV deliv
 
 ## Overview
 ![](https://github.com/Dilizlr/Fourier-RWKV/blob/main/README_images/overview.jpg)
+
+## Installation
+Use the following command to create the environment:
+~~~
+conda env create -f environment.yml
+~~~
+
+## Training
+~~~
+python tool/train.py
+~~~
+
+## Testing
+Pre-trained weights can be obtained from.
+~~~
+python tool/test.py
+~~~
