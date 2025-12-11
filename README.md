@@ -48,7 +48,7 @@ python tools/train.py --mode ITS --yml_path your_yam_path --init_port 23456 --gp
 ```
 
 ## Testing
-Pre-trained weights can be obtained from.
+Pre-trained weights can be obtained from [Baidu Netdisk](https://pan.baidu.com/s/1PGgARHc64-284ibF9OfRrw?pwd=pew8) (pew8).
 ```markup
 python tools/test.py --mode ITS --model_path your_model_path --yml_path your_yam_path --gpu 0
 ```
